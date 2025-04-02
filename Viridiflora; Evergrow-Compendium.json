@@ -1,0 +1,361 @@
+{
+    "$schema": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json",
+	"_meta": {
+		"sources": [
+			{
+				"json": "ViridifloraEvergrow",
+				"abbreviation": "EG",
+				"full": "Evergrow",
+				"version": "0.0.1",
+				"authors": [
+					"Stewinjo"
+				],
+				"url": "https://github.com/Stewinjo/Evergrow-Compendium",
+				"color": "0dfb13"
+			}
+		],
+        "dateAdded": "1743595197"
+	},
+	"monster": [
+		{
+			"name": "Jaycelin Marieve",
+			"source": "Evergrow",
+			"page": 0,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"note": "(Wizard)"
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 81,
+				"formula": "18d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 17,
+			"wis": 12,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"perception": "+4",
+				"nature": "+6"
+			},
+			"passive": 14,
+			"languages": [
+				"Common",
+				"Druidic",
+				"Elvish",
+				"Sylvan"
+			],
+			"cr": "6",
+			"gear": [
+				"wand|xphb"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Jaycelin casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"will": [
+						"{@spell Detect Magic|XPHB}",
+						"{@spell Druidcraft|XPHB}",
+						"{@spell Light|XPHB}",
+						"{@spell Mage Armor|XPHB} (included in AC)",
+						"{@spell Speak with Animals|XPHB}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Erupting Earth|XGE} (level 4 version)",
+							"{@spell Locate Animals or Plants|XPHB}"
+						],
+						"1e": [
+							"{@spell Summon Wood Golem|EG} (level 5 version)",
+							"{@spell Fly|XPHB}"
+						]
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Misty Step (3/Day)",
+					"headerEntries": [
+						"Jaycelin casts {@spell Misty Step|XPHB}, using the same spellcasting ability as Spellcasting."
+					],
+					"daily": {
+						"3": [
+							"{@spell Misty Step|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				},
+				{
+					"name": "Protective Magic (3/Day)",
+					"headerEntries": [
+						"Jaycelin casts {@spell Counterspell|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+					],
+					"daily": {
+						"3": [
+							"{@spell Counterspell|XPHB}",
+							"{@spell Shield|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Jaycelin makes three Arcane Burst attacks."
+					]
+				},
+				{
+					"name": "Arcane Burst",
+					"entries": [
+						"{@atkr m,r} {@hit 6}, reach 5 ft. or range 120 ft. {@h}16 ({@damage 3d8 + 3}) Force damage."
+					]
+				}
+			],
+			"treasure": [
+				"arcana",
+				"individual"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/mage.mp3"
+			},
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"E",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"RA",
+				"MA"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Mage",
+				"source": "XMM"
+			},
+			"shortName": "Jaycelin",
+			"isNpc": true,
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Wood Golem Spirit",
+			"source": "Evergrow",
+			"page": 0,
+			"summonedBySpell": "Summon Wood Golem|EG",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"L"
+			],
+			"type": "plant",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "13 + the spell's level"
+				}
+			],
+			"hp": {
+				"special": "40 + 15 for each spell level above 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 18,
+			"int": 14,
+			"wis": 11,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"bludgeoning",
+				"piercing"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d8 + 4 + summonSpellLevel} Bludgeoning damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Berserk Lashing",
+					"entries": [
+						"{@actTrigger} The spirit takes damage from a creature. {@actResponse} The spirit makes a Slam attack against that creature if possible, or the spirit moves up to half its Speed toward that creature without provoking Opportunity Attacks."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluffImages": true,
+			"fluff": {
+				"name": "Construct Spirit",
+				"source": "XPHB",
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XPHB/Construct Spirit.webp"
+						},
+						"credit": "Hector Ortiz"
+					}
+				]
+			},
+			"senseTags": [
+				"D"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"token": {
+				"name": "Wood Golem Spirit",
+				"source": "EG"
+			},
+			"damageTags": [
+				"B"
+			]
+		}
+	],
+	"spell": [
+		{
+			"name": "Summon Wood Golem",
+			"source": "Evergrow",
+			"page": 0,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a slice of an Great Harvest Apple, which the spell consumes",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You call forth the spirit of a Wood Golem. It manifests in an unoccupied space that you can see within range and uses the {@creature Wood Golem Spirit|EG} stat block. The creature resembles an animate statue (you determine the appearance) made of wood and plant matter. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
+				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Using a Higher-Level Spell Slot",
+					"entries": [
+						"Use the spell slot's level for the spell's level in the stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			],
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "XPHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			}
+		}
+	]
+}
